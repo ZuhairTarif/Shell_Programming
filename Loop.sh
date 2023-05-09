@@ -1,6 +1,6 @@
 #!/bin/bash
 
-select variable in Prime Fibonacci Factorial Odd
+select variable in Prime Fibonacci Factorial Odd Max
 do
   case $variable in
     Prime)
@@ -61,6 +61,26 @@ do
       done
       ;;
 
+    Max)
+     function max {
+      if [ $1 -gt $2 ]
+       then
+         echo $1
+       else
+        echo $2
+      fi
+    }
+
+
+   a=10
+   b=20
+   c=15
+
+   max_ab=$(max $a $b)
+   max_abc=$(max $max_ab $c)
+
+   echo "The maximum of $a, $b, and $c is: $max_abc"
+      ;;
     *)
       echo "Default"
       ;;
